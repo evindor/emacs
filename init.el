@@ -25,18 +25,12 @@
 
 (package-initialize)
 
-(require-package 'evil)
 (require-package 'sr-speedbar)
 (require-package 'monokai-theme)
 (require-package 'auto-complete)
 
-(setq evil-search-module 'evil-search
-      evil-want-C-u-scroll t
-      evil-want-C-w-in-emacs-state t)
-
-(require 'evil)
 (require 'auto-complete)
-(evil-mode t)
+(require 'init-evil)
 
 (show-paren-mode t)
 (load-theme 'monokai t)
@@ -47,7 +41,7 @@
 (add-to-list 'ac-modes 'lisp-mode)
 
 ;; Shut up emacs i'm just starting
-(setq bell-volume 0)
+(setq ring-bell-function 'ignore)
 
 ;; Set line count
 (global-linum-mode t)
