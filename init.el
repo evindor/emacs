@@ -31,6 +31,9 @@
 
 (require 'auto-complete)
 (require 'init-evil)
+(require 'theme-and-looks)
+(require 'ido)
+(ido-mode t)
 
 (show-paren-mode t)
 (load-theme 'monokai t)
@@ -45,3 +48,4 @@
 
 ;; Set line count
 (global-linum-mode t)
+
