@@ -6,18 +6,19 @@
       evil-want-C-u-scroll t
       evil-want-C-w-in-emacs-state t)
 
-  (evil-leader/set-leader ",")
-  (evil-leader/set-key
-    "r" 'sr-speedbar-toggle
-    "e" (kbd "C-x C-e")
-    ", e" (kbd "C-M-x")
-    "E" (kbd "C-M-x")
-    "b" 'buffer-menu
-    "d" 'kill-this-buffer
-    "v" (kbd "C-w v C-w l")
-    "s" (kbd "C-w s C-w j")
-    "h" help-map
-    "h h" 'help-for-help-internal)
+(evil-leader/set-leader ",")
+(evil-leader/set-key
+  "r" 'dired
+  "e" (kbd "C-x C-e")
+  "E" (kbd "C-M-x")
+  "b" 'switch-to-buffer
+  "f" 'find-file
+  "d" 'kill-this-buffer
+  "v" (kbd "C-w v C-w l")
+  "s" (kbd "C-w s C-w j")
+  "h" 'helm-mini
+  "l" 'whitespace-mode)
+(define-key evil-normal-state-map (kbd "SPC") 'ace-jump-mode)
 (require 'evil)
 (evil-mode t)
 (provide 'init-evil)
